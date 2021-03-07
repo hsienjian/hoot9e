@@ -5,10 +5,12 @@
  */
 package domain;
 
+import java.sql.Date;
+
 public class Order {
 
     private int orderID;
-    private String date;
+    private Date date;
     private double ttlPrice;
     private String status;
     private Customer custID;
@@ -17,7 +19,7 @@ public class Order {
 
     }
 
-    public Order(int orderID, String date, double ttlPrice, String status, Customer custID) {
+    public Order(int orderID, Date date, double ttlPrice, String status, Customer custID) {
         this.orderID = orderID;
         this.date = date;
         this.ttlPrice = ttlPrice;
@@ -29,7 +31,7 @@ public class Order {
         return orderID;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
@@ -49,7 +51,7 @@ public class Order {
         this.orderID = orderID;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
