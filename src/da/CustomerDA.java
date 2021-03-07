@@ -40,7 +40,7 @@ public class CustomerDA {
             
             if (rs.next()) {
                 
-                customer = new Customer(CustID, rs.getString("firstName"), rs.getString("lastName") ,rs.getInt("age") ,rs.getString("email") ,rs.getString("password"), rs.getString("gender") , rs.getString("address"),rs.getString("phoneNo"));
+                customer = new Customer(CustID, rs.getString("firstName"), rs.getString("lastName") ,rs.getInt("age") ,rs.getString("email") ,rs.getString("password"), rs.getString("gender") , rs.getString("address"),rs.getString("phoneNo"),rs.getInt("rewardPoint"));
             }
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage(), "ERROR", JOptionPane.ERROR_MESSAGE);

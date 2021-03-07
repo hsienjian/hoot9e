@@ -21,8 +21,11 @@ public class Customer implements Serializable{
     private String gender;
     private String address;
     private String phoneNo;
+    private int rewardPoint;
 
-    public Customer(int custID, String firstName, String lastName, int age, String email, String password, String gender, String address, String phoneNo) {
+
+
+    public Customer(int custID, String firstName, String lastName, int age, String email, String password, String gender, String address, String phoneNo, int rewardPoint) {
         this.custID = custID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -32,8 +35,11 @@ public class Customer implements Serializable{
         this.gender = gender;
         this.address = address;
         this.phoneNo = phoneNo;
+        this.rewardPoint = rewardPoint;
     }
 
+    
+    
     public Customer() {
     }
 
@@ -75,6 +81,14 @@ public class Customer implements Serializable{
 
     public void setCustID(int custID) {
         this.custID = custID;
+    }
+
+    public int getRewardPoint() {
+        return rewardPoint;
+    }
+
+    public void setRewardPoint(int rewardPoint) {
+        this.rewardPoint = rewardPoint;
     }
 
     public void setFirstName(String firstName) {
