@@ -7,7 +7,8 @@ CREATE TABLE "CUSTOMER" (
     "PASSWORD" VARCHAR(100) not null,
     "GENDER" CHAR(6),
     "ADDRESS" VARCHAR(60),
-    "PHONE_NO" CHAR(11)
+    "PHONE_NO" CHAR(11),
+    "REWARD_POINT" INT
 );
 
 CREATE TABLE "STAFF" (
@@ -67,12 +68,12 @@ CREATE TABLE "ORDERLIST" (
     CONSTRAINT FK_ORDERLIST_ORDERID foreign key ("ORDER_ID") references "ORDER"("ORDER_ID")
 );
 
-INSERT INTO CUSTOMER (FIRST_NAME, LAST_NAME, AGE, EMAIL, PASSWORD, GENDER, ADDRESS, PHONE_NO) VALUES
-('Ng', 'Jing Chong', 20, 'ngjingchong@gmail.com', 'ngjingchong', 'Male', 'Bukit Jalil', '010-2826133'),
-('Low', 'Jia Hie', 20, 'lowjiahie@gmail.com', 'lowjiahie', 'Male', 'Bangi', '016-3742396'),
-('Khor', 'Wen Xin', 20, 'khorwenxin@gmail.com', 'khorwenxin', 'Female', 'Kepong', '019-3820970'),
-('Kong', 'Yuen Fai', 22, 'kongyuenfai@gmail.com', 'kongyuenfai', 'Male', 'Setapak', '019-7685709'),
-('Puah', 'Hsien Jian', 21, 'puahhisenjian@gmail.com', 'puahhsienjian', 'Male', 'Cheras', '019-3218340');
+INSERT INTO CUSTOMER (FIRST_NAME, LAST_NAME, AGE, EMAIL, PASSWORD, GENDER, ADDRESS, PHONE_NO, REWARD_POINT) VALUES
+('Ng', 'Jing Chong', 20, 'ngjingchong@gmail.com', 'ngjingchong', 'Male', 'Bukit Jalil', '010-2826133', 0),
+('Low', 'Jia Hie', 20, 'lowjiahie@gmail.com', 'lowjiahie', 'Male', 'Bangi', '016-3742396', 100),
+('Khor', 'Wen Xin', 20, 'khorwenxin@gmail.com', 'khorwenxin', 'Female', 'Kepong', '019-3820970', 50),
+('Kong', 'Yuen Fai', 22, 'kongyuenfai@gmail.com', 'kongyuenfai', 'Male', 'Setapak', '019-7685709', 0),
+('Puah', 'Hsien Jian', 21, 'puahhisenjian@gmail.com', 'puahhsienjian', 'Male', 'Cheras', '019-3218340', 100);
 
 INSERT INTO STAFF (FIRST_NAME, LAST_NAME, AGE, EMAIL, PASSWORD, GENDER, ADDRESS, PHONE_NO, "POSITION") VALUES
 ('Ng', 'JC', 20, 'ngjc@gmail.com', 'ngjingchong', 'Male', 'Bukit Jalil', '010-2826133', 'Manager'),
